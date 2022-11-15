@@ -6,14 +6,14 @@
 
         function n(i) {
             if (t[i]) return t[i].exports;
-            var a = t[i] = {i: i, l: !1, exports: {}};
+            var a = t[i] = { i: i, l: !1, exports: {} };
             return e[i].call(a.exports, a, a.exports, n), a.l = !0, a.exports
         }
 
         return n.m = e, n.c = t, n.d = function (e, t, i) {
-            n.o(e, t) || Object.defineProperty(e, t, {configurable: !1, enumerable: !0, get: i})
+            n.o(e, t) || Object.defineProperty(e, t, { configurable: !1, enumerable: !0, get: i })
         }, n.r = function (e) {
-            Object.defineProperty(e, "__esModule", {value: !0})
+            Object.defineProperty(e, "__esModule", { value: !0 })
         }, n.n = function (e) {
             var t = e && e.__esModule ? function () {
                 return e.default
@@ -26,7 +26,7 @@
         }, n.p = "/", n(n.s = 41)
     }([function (e, t, n) {
         "use strict";
-        Object.defineProperty(t, "__esModule", {value: !0});
+        Object.defineProperty(t, "__esModule", { value: !0 });
         var i = /mobile/i.test(window.navigator.userAgent), a = {
             secondToTime: function (e) {
                 var t = Math.floor(e / 3600), n = Math.floor((e - 3600 * t) / 60),
@@ -92,13 +92,13 @@
         e.exports = n(15)
     }, function (e, t, n) {
         "use strict";
-        Object.defineProperty(t, "__esModule", {value: !0});
+        Object.defineProperty(t, "__esModule", { value: !0 });
         var i = g(n(33)), a = g(n(32)), r = g(n(31)), o = g(n(30)), s = g(n(29)), l = g(n(28)), u = g(n(27)),
             c = g(n(26)), p = g(n(25)), d = g(n(24)), h = g(n(23)), y = g(n(22)), f = g(n(21)), v = g(n(20)),
             m = g(n(19));
 
         function g(e) {
-            return e && e.__esModule ? e : {default: e}
+            return e && e.__esModule ? e : { default: e }
         }
 
         var w = {
@@ -178,7 +178,7 @@
         }) ? i.call(t, n, t, e) : i) || (e.exports = a)
     }, function (e, t, n) {
         "use strict";
-        Object.defineProperty(t, "__esModule", {value: !0});
+        Object.defineProperty(t, "__esModule", { value: !0 });
         var i = function () {
             function e(e, t) {
                 for (var n = 0; n < t.length; n++) {
@@ -193,7 +193,7 @@
         }(), a = s(n(1)), r = s(n(0)), o = s(n(5));
 
         function s(e) {
-            return e && e.__esModule ? e : {default: e}
+            return e && e.__esModule ? e : { default: e }
         }
 
         var l = function () {
@@ -227,7 +227,7 @@
                 }
             }, {
                 key: "add", value: function (e) {
-                    this.player.events.trigger("listadd", {audios: e}), "[object Array]" !== Object.prototype.toString.call(e) && (e = [e]), e.map(function (e) {
+                    this.player.events.trigger("listadd", { audios: e }), "[object Array]" !== Object.prototype.toString.call(e) && (e = [e]), e.map(function (e) {
                         return e.name = e.name || e.title || "Audio name", e.artist = e.artist || e.author || "Audio artist", e.cover = e.cover || e.pic, e.type = e.type || "normal", e
                     });
                     var t = !(this.audios.length > 1), n = 0 === this.audios.length;
@@ -239,7 +239,7 @@
                 }
             }, {
                 key: "remove", value: function (e) {
-                    if (this.player.events.trigger("listremove", {index: e}), this.audios[e]) if (this.audios.length > 1) {
+                    if (this.player.events.trigger("listremove", { index: e }), this.audios[e]) if (this.audios.length > 1) {
                         var t = this.player.container.querySelectorAll(".aplayer-list li");
                         t[e].remove(), this.audios.splice(e, 1), this.player.lrc && this.player.lrc.remove(e), e === this.index && (this.audios[e] ? this.switch(e) : this.switch(e - 1)), this.index > e && this.index--;
                         for (var n = e; n < t.length; n++) t[n].getElementsByClassName("aplayer-list-index")[0].textContent = n;
@@ -248,7 +248,7 @@
                 }
             }, {
                 key: "switch", value: function (e) {
-                    if (this.player.events.trigger("listswitch", {index: e}), void 0 !== e && this.audios[e]) {
+                    if (this.player.events.trigger("listswitch", { index: e }), void 0 !== e && this.audios[e]) {
                         this.index = e;
                         var t = this.audios[this.index];
                         this.player.template.pic.style.backgroundImage = t.cover ? "url('" + t.cover + "')" : "", this.player.theme(this.audios[this.index].theme || this.player.options.theme, this.index, !1), this.player.template.title.innerHTML = t.name, this.player.template.author.innerHTML = t.artist ? " - " + t.artist : "";
@@ -265,7 +265,7 @@
         t.default = l
     }, function (e, t, n) {
         "use strict";
-        Object.defineProperty(t, "__esModule", {value: !0});
+        Object.defineProperty(t, "__esModule", { value: !0 });
         var i = function () {
             function e(e, t) {
                 for (var n = 0; n < t.length; n++) {
@@ -302,7 +302,7 @@
         t.default = a
     }, function (e, t, n) {
         "use strict";
-        Object.defineProperty(t, "__esModule", {value: !0});
+        Object.defineProperty(t, "__esModule", { value: !0 });
         var i = function () {
             function e(e, t) {
                 for (var n = 0; n < t.length; n++) {
@@ -358,7 +358,7 @@
         t.default = a
     }, function (e, t, n) {
         "use strict";
-        Object.defineProperty(t, "__esModule", {value: !0});
+        Object.defineProperty(t, "__esModule", { value: !0 });
         var i = function () {
             function e(e, t) {
                 for (var n = 0; n < t.length; n++) {
@@ -373,7 +373,7 @@
         }(), a = o(n(0)), r = o(n(3));
 
         function o(e) {
-            return e && e.__esModule ? e : {default: e}
+            return e && e.__esModule ? e : { default: e }
         }
 
         var s = function () {
@@ -483,7 +483,7 @@
         }
     }, function (e, t, n) {
         "use strict";
-        Object.defineProperty(t, "__esModule", {value: !0});
+        Object.defineProperty(t, "__esModule", { value: !0 });
         var i, a = function () {
             function e(e, t) {
                 for (var n = 0; n < t.length; n++) {
@@ -495,7 +495,7 @@
             return function (t, n, i) {
                 return n && e(t.prototype, n), i && e(t, i), t
             }
-        }(), r = n(10), o = (i = r) && i.__esModule ? i : {default: i};
+        }(), r = n(10), o = (i = r) && i.__esModule ? i : { default: i };
         var s = function () {
             function e(t) {
                 !function (e, t) {
@@ -527,12 +527,12 @@
                         this.parsed[e] = [["00:00", "Loading"]];
                         var n = new XMLHttpRequest;
                         n.onreadystatechange = function () {
-                            e === t.player.list.index && 4 === n.readyState && (n.status >= 200 && n.status < 300 || 304 === n.status ? t.parsed[e] = t.parse(n.responseText) : (t.player.notice("LRC file request fails: status " + n.status), t.parsed[e] = [["00:00", "Not available"]]), t.container.innerHTML = (0, o.default)({lyrics: t.parsed[e]}), t.update(0), t.current = t.parsed[e])
+                            e === t.player.list.index && 4 === n.readyState && (n.status >= 200 && n.status < 300 || 304 === n.status ? t.parsed[e] = t.parse(n.responseText) : (t.player.notice("LRC file request fails: status " + n.status), t.parsed[e] = [["00:00", "Not available"]]), t.container.innerHTML = (0, o.default)({ lyrics: t.parsed[e] }), t.update(0), t.current = t.parsed[e])
                         };
                         var i = this.player.list.audios[e].lrc;
                         n.open("get", i, !0), n.send(null)
                     } else this.player.list.audios[e].lrc ? this.parsed[e] = this.parse(this.player.list.audios[e].lrc) : this.parsed[e] = [["00:00", "Not available"]];
-                    this.container.innerHTML = (0, o.default)({lyrics: this.parsed[e]}), this.update(0), this.current = this.parsed[e]
+                    this.container.innerHTML = (0, o.default)({ lyrics: this.parsed[e] }), this.update(0), this.current = this.parsed[e]
                 }
             }, {
                 key: "parse", value: function (e) {
@@ -569,7 +569,7 @@
         t.default = s
     }, function (e, t, n) {
         "use strict";
-        Object.defineProperty(t, "__esModule", {value: !0});
+        Object.defineProperty(t, "__esModule", { value: !0 });
         var i, a = function () {
             function e(e, t) {
                 for (var n = 0; n < t.length; n++) {
@@ -581,7 +581,7 @@
             return function (t, n, i) {
                 return n && e(t.prototype, n), i && e(t, i), t
             }
-        }(), r = n(0), o = (i = r) && i.__esModule ? i : {default: i};
+        }(), r = n(0), o = (i = r) && i.__esModule ? i : { default: i };
         var s = function () {
             function e(t) {
                 !function (e, t) {
@@ -602,7 +602,7 @@
         t.default = s
     }, function (e, t, n) {
         "use strict";
-        Object.defineProperty(t, "__esModule", {value: !0});
+        Object.defineProperty(t, "__esModule", { value: !0 });
         var i = function () {
             function e(e, t) {
                 for (var n = 0; n < t.length; n++) {
@@ -703,7 +703,7 @@
         }
     }, function (e, t, n) {
         "use strict";
-        Object.defineProperty(t, "__esModule", {value: !0});
+        Object.defineProperty(t, "__esModule", { value: !0 });
         var i = function () {
             function e(e, t) {
                 for (var n = 0; n < t.length; n++) {
@@ -718,7 +718,7 @@
         }(), a = o(n(3)), r = o(n(16));
 
         function o(e) {
-            return e && e.__esModule ? e : {default: e}
+            return e && e.__esModule ? e : { default: e }
         }
 
         var s = function () {
@@ -745,7 +745,7 @@
         t.default = s
     }, function (e, t, n) {
         "use strict";
-        Object.defineProperty(t, "__esModule", {value: !0}), t.default = function (e) {
+        Object.defineProperty(t, "__esModule", { value: !0 }), t.default = function (e) {
             var t = {
                 container: e.element || document.getElementsByClassName("aplayer")[0],
                 mini: e.narrow || e.fixed || !1,
@@ -926,7 +926,7 @@
                     }), d.setImmediate = function (e) {
                         "function" != typeof e && (e = new Function("" + e));
                         for (var t = new Array(arguments.length - 1), n = 0; n < t.length; n++) t[n] = arguments[n + 1];
-                        var a = {callback: e, args: t};
+                        var a = { callback: e, args: t };
                         return u[l] = a, i(l), l++
                     }, d.clearImmediate = h
                 }
@@ -1136,23 +1136,23 @@
         }).call(this, n(36).setImmediate)
     }, function (e, t, n) {
         "use strict";
-        Object.defineProperty(t, "__esModule", {value: !0});
+        Object.defineProperty(t, "__esModule", { value: !0 });
         var i = function () {
-                function e(e, t) {
-                    for (var n = 0; n < t.length; n++) {
-                        var i = t[n];
-                        i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
-                    }
+            function e(e, t) {
+                for (var n = 0; n < t.length; n++) {
+                    var i = t[n];
+                    i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
                 }
+            }
 
-                return function (t, n, i) {
-                    return n && e(t.prototype, n), i && e(t, i), t
-                }
-            }(), a = v(n(37)), r = v(n(0)), o = v(n(3)), s = v(n(18)), l = v(n(17)), u = v(n(13)), c = v(n(12)),
+            return function (t, n, i) {
+                return n && e(t.prototype, n), i && e(t, i), t
+            }
+        }(), a = v(n(37)), r = v(n(0)), o = v(n(3)), s = v(n(18)), l = v(n(17)), u = v(n(13)), c = v(n(12)),
             p = v(n(11)), d = v(n(9)), h = v(n(8)), y = v(n(7)), f = v(n(6));
 
         function v(e) {
-            return e && e.__esModule ? e : {default: e}
+            return e && e.__esModule ? e : { default: e }
         }
 
         var m = [], g = function () {
@@ -1296,7 +1296,7 @@
                 key: "notice", value: function (e) {
                     var t = this, n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2e3,
                         i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .8;
-                    this.template.notice.innerHTML = e, this.template.notice.style.opacity = i, this.noticeTime && clearTimeout(this.noticeTime), this.events.trigger("noticeshow", {text: e}), n && (this.noticeTime = setTimeout(function () {
+                    this.template.notice.innerHTML = e, this.template.notice.style.opacity = i, this.noticeTime && clearTimeout(this.noticeTime), this.events.trigger("noticeshow", { text: e }), n && (this.noticeTime = setTimeout(function () {
                         t.template.notice.style.opacity = 0, t.events.trigger("noticehide")
                     }, n))
                 }
@@ -1340,8 +1340,8 @@
     }, , function (e, t, n) {
     }, function (e, t, n) {
         "use strict";
-        Object.defineProperty(t, "__esModule", {value: !0}), n(40);
-        var i, a = n(38), r = (i = a) && i.__esModule ? i : {default: i};
+        Object.defineProperty(t, "__esModule", { value: !0 }), n(40);
+        var i, a = n(38), r = (i = a) && i.__esModule ? i : { default: i };
         console.log("\n %c APlayer v1.10.1 af84efb %c http://aplayer.js.org \n", "color: #fadfa3; background: #030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;"), t.default = r.default
     }]).default
 });
