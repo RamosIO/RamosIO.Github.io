@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <link rel="alternate icon" type="image/png" href="/img/favicon.png">
+    <title>Ramos的知识库  </title>
+    
+<link rel="stylesheet" href="/css/reset.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/css/markdown.css">
+
+    
+<link rel="stylesheet" href="/css/fonts.css">
+
+    
+<link rel="stylesheet" href="/css/APlayer.css">
+
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">Ramos的知识库</a>
+    <a class="go-home" href="/">
+        <svg width="8" height="14" viewBox="0 0 8 14">
+            <path d="M7 1L1 7l6 6" stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
+</div>
+                
+                <div class="post-main">
+
+    
+        <div class="post-main-title">
+            CLion安装及简单配置
+        </div>
+        <div class="post-meta">
+            2021-10-16
+        </div>
+    
+
+    <div class="post-md">
+        <p>CLion是JetBrains开发的现代IDE，旨在各种平台上运行C和C ++。<br>它提供了智能的代码辅助支持，因此可以主要重点放在重要的事情上。<br>优点：易于启动新项目；智能代码完成；简易调试；智能代码分析；内建工具。</p>
+<p>相比于Visual Studio，<strong>CLion需要手动配置工具链</strong>来支持文件的编译运行等功能。</p>
+<h2 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h2><p>进入<a target="_blank" rel="noopener" href="https://www.jetbrains.com/zh-cn/clion/download">CLion官网</a>，页面如下，点击下载最新安装包。<br><img src="https://cdn.rheng.xyz/blog/CLion安装及简单配置/CLion下载.jpg " width="600" alt="CLion下载"></p>
+<h2 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h2><p>CLion的安装十分简单，只需要在其中勾上如下选项即可。<br><img src="https://cdn.rheng.xyz/blog/CLion安装及简单配置/CLion安装.jpg" width="600" alt="CLion安装"></p>
+<h2 id="3-激活"><a href="#3-激活" class="headerlink" title="3. 激活"></a>3. 激活</h2><p>CLion为正版软件，需要注册账户购买订阅。第一次使用有30天试用期，到期后则需要订阅。<br>如果你从事教育行业，通过认证后即可免费使用JetBrains公司的所有开发软件。认证方法请查看另一篇文章：<a href="null">JetBrains免费教育许可证</a>(暂未发布)。</p>
+<p>进入CLion后选择<strong>“Evaluate for free”</strong>。然后下方打勾，填入自己的邮箱地址。<br>点击“Evaluate”即可激活30天的试用期，最后点击“Continue”进入下一步。<br><img src="https://cdn.rheng.xyz/blog/CLion安装及简单配置/CLion激活.jpg" width="600" alt="CLion激活"></p>
+<h2 id="4-安装中文插件"><a href="#4-安装中文插件" class="headerlink" title="4. 安装中文插件"></a>4. 安装中文插件</h2><p>第一次使用CLion对于新手有些陌生，因此中文语言包会帮助你迅速了解CLion。<br>也有许多的插件是十分实用的，安装上适合自己的插件，在编写代码的时候能够提升舒适度。</p>
+<p>如图左侧点击 “插件&#x2F;Plugin”，在“Marketplace”中搜索“Chinese”即可找到中文语言包。安装需要重启。<br><img src="https://cdn.rheng.xyz/blog/CLion安装及简单配置/CLion汉化插件.jpg" width="600" alt="CLion汉化插件"></p>
+<h2 id="5-配置工具链"><a href="#5-配置工具链" class="headerlink" title="5. 配置工具链"></a>5. 配置工具链</h2><p>至此CLion已经可以编写代码，但仍然不能运行源代码。<strong>需要手动配置工具链</strong>。<br>CLion所支持的工具链有：<br><img src="https://cdn.rheng.xyz/blog/CLion安装及简单配置/CLion工具链.jpg" alt="CLion工具链" ><br>初次使用建议安装MinGW。下面介绍MinGW的安装方法：</p>
+<blockquote>
+<ol>
+<li><p>进入MinGW的下载页面：<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/">MinGW</a></p>
+</li>
+<li><p>滑至页面下方，选择适合自己电脑的版本</p>
+<img src="https://cdn.rheng.xyz/blog/CLion安装及简单配置/MinGW下载.jpg" width="600" alt="MinGW下载">
+</li>
+<li><p>下载后得到一个压缩包，选择好存放位置，将其解压得“mingw64”文件夹(此文件夹即为工具链)。</p>
+</li>
+</ol>
+</blockquote>
+<p>打开CLion设置，进入工具链设置。点击加号添加“MinGW”，将环境设置为刚才解压得到的“mingw64”文件夹。<br>同时请确保下面的“CMake”“Make”“C编译器”“C++编译器”“调试器”都能够被检测到。<br><img src="https://cdn.rheng.xyz/blog/CLion安装及简单配置/CLion工具链配置.jpg" width="600" alt="CLion工具链配置"></p>
+<h2 id="6-测试"><a href="#6-测试" class="headerlink" title="6. 测试"></a>6. 测试</h2><p>现在已将CLion配置完成，可以正常使用。新建一个项目并且尝试编译运行。下图为正常运行。<br><img src="https://cdn.rheng.xyz/blog/CLion安装及简单配置/CLion运行.jpg" width="600" alt="CLion运行"></p>
+
+    </div>
+
+</div>
+                <div class="footer">
+    <span>Copyright © 2022 Ramos | Theme Designed By 這Li</span> 
+    <span></span>
+
+
+
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+
+<script src="/js/APlayer.js"></script>
+
+
+<script src="/js/Meting.js"></script>
+
+</div>
+
+<!-- <meting-js
+    id="8206861489"
+    server="tencent"
+    type="playlist"
+    fixed="1"
+    mini="0"
+    autoplay="false"
+    theme="#2980b9"
+    loop="all"
+    order="list"
+    preload="auto"
+    volume="0.2"
+    mutex="1"
+    list-folded="1"
+    list-max-height="165px"
+    storage-name="Meting.js">
+</meting-js> -->
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+
+            </div>
+        </div>
+    </body>
+</html>
